@@ -45,43 +45,43 @@
         paste {
             bindings = <&kp LC(V)>;
             key-positions = <52 40>;
-            layers = <5>;
+            layers = <4>;
         };
 
         copy {
             bindings = <&kp LC(C)>;
             key-positions = <52 39>;
-            layers = <5>;
+            layers = <4>;
         };
 
         cut {
             bindings = <&kp LC(X)>;
             key-positions = <52 38>;
-            layers = <5>;
+            layers = <4>;
         };
 
         undo {
             bindings = <&kp LC(Z)>;
             key-positions = <52 37>;
-            layers = <5>;
+            layers = <4>;
         };
 
         save {
             bindings = <&kp LC(S)>;
             key-positions = <52 26>;
-            layers = <5>;
+            layers = <4>;
         };
 
         All {
             bindings = <&kp LC(S)>;
             key-positions = <52 25>;
-            layers = <5>;
+            layers = <4>;
         };
 
         find {
             bindings = <&kp LC(F)>;
             key-positions = <52 28>;
-            layers = <5>;
+            layers = <4>;
         };
     };
 
@@ -89,8 +89,22 @@
         windows: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 3 &tog 4>;
+            bindings = <&bt BT_SEL 2 &tog 4>;
             label = "NEW_MACRO";
+        };
+
+        mac_air: MacBookAir {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0 &tog 0>;
+            label = "MACBOOKAIR";
+        };
+
+        mac_pro: mac_pro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1 &tog 0>;
+            label = "MAC_PRO";
         };
     };
 
@@ -179,16 +193,6 @@
             >;
         };
 
-        numpad {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &kp KP_NUMLOCK   &kp KP_DIVIDE    &kp KP_MULTIPLY  &kp MINUS    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &kp KP_N7        &kp KP_N8        &kp KP_N9        &kp KP_PLUS  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &kp KP_N4        &kp KP_N5        &kp KP_N6        &kp KP_N0    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_N3        &kp KP_DOT   &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans           &trans           &trans           &trans
-            >;
-        };
-
         Windows {
             display-name = "Windows";
             bindings = <
@@ -202,6 +206,16 @@
             sensor-bindings =
                 <&inc_dec_kp C_VOL_UP C_VOL_DN>,
                 <&inc_dec_kp PG_UP PG_DN>;
+        };
+
+        numpad {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &kp KP_NUMLOCK   &kp KP_DIVIDE    &kp KP_MULTIPLY  &kp MINUS    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &kp KP_N7        &kp KP_N8        &kp KP_N9        &kp KP_PLUS  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &kp KP_N4        &kp KP_N5        &kp KP_N6        &kp KP_N0    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_N3        &kp KP_DOT   &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans           &trans           &trans           &trans
+            >;
         };
     };
 };
