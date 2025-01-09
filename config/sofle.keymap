@@ -180,14 +180,16 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&none   &none       &none      &none        &none        &none                       &trans     &kp C_PREVIOUS  &kp C_PLAY  &kt C_NEXT  &trans   &kp EQUAL
-&none   &kp INS     &kp PSCRN  &kp K_CMENU  &trans       &trans                      &kp PG_UP  &trans          &kp UP      &trans      &kp N0   &kp RIGHT_BRACKET
-&trans  &kp LALT    &kp LCTRL  &kp LSHFT    &trans       &kp CLCK                    &kp PG_DN  &kp LEFT        &kp DOWN    &kp RIGHT   &kp DEL  &kp BSPC
-&trans  &kp K_UNDO  &kp K_CUT  &kp K_COPY   &kp K_PASTE  &trans    &trans    &trans  &trans     &trans          &trans      &trans      &trans   &trans
-                    &trans     &trans       &trans       &trans    &trans    &trans  &trans     &trans          &trans      &trans
+&none   &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none        &none        &kp C_VOICE_COMMAND                                   &trans     &kp C_PREVIOUS  &kp C_PLAY  &kt C_NEXT  &trans   &kp EQUAL
+&none   &kp INS               &kp PSCRN             &kp K_CMENU  &trans       &trans                                                &kp PG_UP  &trans          &kp UP      &trans      &kp N0   &kp RIGHT_BRACKET
+&trans  &kp LALT              &kp LCTRL             &kp LSHFT    &trans       &kp CLCK                                              &kp PG_DN  &kp LEFT        &kp DOWN    &kp RIGHT   &kp DEL  &kp BSPC
+&trans  &kp K_UNDO            &kp K_CUT             &kp K_COPY   &kp K_PASTE  &trans               &trans    &kp C_BRIGHTNESS_AUTO  &trans     &trans          &trans      &trans      &trans   &trans
+                              &trans                &trans       &trans       &trans               &trans    &trans                 &trans     &trans          &trans      &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
         };
 
         adjust_layer {
@@ -218,6 +220,18 @@
             >;
 
             label = "numpad";
+        };
+
+        layer_6 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp 0 0>, <&inc_dec_kp 0 0>;
         };
     };
 };
