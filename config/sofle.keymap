@@ -37,6 +37,13 @@
             #binding-cells = <2>;
             tapping-term-ms = <700>;
         };
+
+        numpad: numpad {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUMPAD";
+            #binding-cells = <0>;
+            bindings = <&none>, <&tog 5>;
+        };
     };
 
     combos {
@@ -126,7 +133,7 @@
 &kp GRAVE                         &kp Q   &kp W             &kp E         &kp R             &kp T                            &kp Y   &kp U           &kp I          &kp O    &kp P     &kp LEFT_BRACKET
 &kp TAB                           &kp A   &kp S             &kp D         &kp F             &kp G                            &kp H   &kp J           &kp K          &kp L    &kp SEMI  &kp SQT
 &lang_shift LEFT_SHIFT LC(SPACE)  &kp Z   &kp X             &kp C         &kp V             &kp B   &kp C_MUTE    &none      &kp N   &kp M           &kp COMMA      &kp DOT  &kp FSLH  &kp RC(RG(RS(NUMBER_4)))
-                                          &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &mo 2   &kp SPACE     &kp ENTER  &mo 3   &kp LEFT_SHIFT  &kp BACKSPACE  &tog 5
+                                          &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &mo 2   &kp SPACE     &kp ENTER  &mo 3   &kp LEFT_SHIFT  &kp BACKSPACE  &numpad
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -139,7 +146,7 @@
 &kp GRAVE                         &kp Q   &kp W             &kp E             &kp R         &kp T                            &kp Y   &kp U           &kp I          &kp O    &kp P     &kp LEFT_BRACKET
 &kp TAB                           &kp A   &kp S             &kp D             &kp F         &kp G                            &kp H   &kp J           &kp K          &kp L    &kp SEMI  &kp SQT
 &lang_shift LEFT_SHIFT LG(SPACE)  &kp Z   &kp X             &kp C             &kp V         &kp B   &kp C_MUTE    &none      &kp N   &kp M           &kp COMMA      &kp DOT  &kp FSLH  &kp LG(LS(S))
-                                          &kp LEFT_CONTROL  &kp LEFT_COMMAND  &kp LEFT_ALT  &mo 2   &kp SPACE     &kp ENTER  &mo 3   &kp LEFT_SHIFT  &kp BACKSPACE  &tog 5
+                                          &kp LEFT_CONTROL  &kp LEFT_COMMAND  &kp LEFT_ALT  &mo 2   &kp SPACE     &kp ENTER  &mo 3   &kp LEFT_SHIFT  &kp BACKSPACE  &numpad
             >;
 
             sensor-bindings =
@@ -180,10 +187,10 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&none   &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LG(F3)   &none        &kp C_VOICE_COMMAND                                   &trans     &kp C_PREVIOUS  &kp C_PLAY  &kt C_NEXT  &trans   &kp EQUAL
-&none   &kp INS               &kp PSCRN             &kp K_CMENU  &trans       &trans                                                &kp PG_UP  &trans          &kp UP      &trans      &kp N0   &kp RIGHT_BRACKET
-&trans  &kp LALT              &kp LCTRL             &kp LSHFT    &trans       &kp CLCK                                              &kp PG_DN  &kp LEFT        &kp DOWN    &kp RIGHT   &kp DEL  &kp BSPC
-&trans  &kp K_UNDO            &kp K_CUT             &kp K_COPY   &kp K_PASTE  &trans               &trans    &kp C_BRIGHTNESS_AUTO  &trans     &trans          &trans      &trans      &trans   &trans
+&none   &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LG(F3)   &none        &kp C_VOICE_COMMAND                                   &trans     &kp C_PREVIOUS  &kp C_PLAY  &kt C_NEXT  &trans  &kp EQUAL
+&none   &kp INS               &kp PSCRN             &kp K_CMENU  &trans       &trans                                                &kp PG_UP  &trans          &kp UP      &trans      &kp N0  &kp RIGHT_BRACKET
+&trans  &kp LALT              &kp LCTRL             &kp LSHFT    &trans       &kp CLCK                                              &kp PG_DN  &kp LEFT        &kp DOWN    &kp RIGHT   &trans  &trans
+&trans  &kp K_UNDO            &kp K_CUT             &kp K_COPY   &kp K_PASTE  &trans               &trans    &kp C_BRIGHTNESS_AUTO  &trans     &trans          &trans      &trans      &trans  &trans
                               &trans                &trans       &trans       &trans               &trans    &trans                 &trans     &trans          &trans      &trans
             >;
 
