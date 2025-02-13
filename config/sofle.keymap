@@ -187,11 +187,11 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&none   &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LG(F3)   &none        &kp C_VOICE_COMMAND                                   &trans     &kp C_PREVIOUS  &kp C_PLAY  &kt C_NEXT  &trans  &kp EQUAL
-&none   &kp INS               &kp PSCRN             &kp K_CMENU  &trans       &trans                                                &kp PG_UP  &trans          &kp UP      &trans      &kp N0  &kp RIGHT_BRACKET
-&trans  &kp LALT              &kp LCTRL             &kp LSHFT    &trans       &kp CLCK                                              &kp PG_DN  &kp LEFT        &kp DOWN    &kp RIGHT   &trans  &trans
-&trans  &kp K_UNDO            &kp K_CUT             &kp K_COPY   &kp K_PASTE  &trans               &trans    &kp C_BRIGHTNESS_AUTO  &trans     &trans          &trans      &trans      &trans  &trans
-                              &trans                &trans       &trans       &trans               &trans    &trans                 &trans     &trans          &trans      &trans
+&none   &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LG(F3)   &none        &kp C_VOICE_COMMAND                                   &trans     &kp K_PREV  &kp C_PLAY  &kt K_NEXT  &trans  &kp EQUAL
+&none   &kp INS               &kp PSCRN             &kp K_CMENU  &trans       &trans                                                &kp PG_UP  &trans      &kp UP      &trans      &kp N0  &kp RIGHT_BRACKET
+&trans  &kp LALT              &kp LCTRL             &kp LSHFT    &trans       &kp CLCK                                              &kp PG_DN  &kp LEFT    &kp DOWN    &kp RIGHT   &trans  &trans
+&trans  &kp K_UNDO            &kp K_CUT             &kp K_COPY   &kp K_PASTE  &trans               &trans    &kp C_BRIGHTNESS_AUTO  &trans     &trans      &trans      &trans      &trans  &trans
+                              &trans                &trans       &trans       &trans               &trans    &trans                 &trans     &trans      &trans      &trans
             >;
 
             sensor-bindings =
